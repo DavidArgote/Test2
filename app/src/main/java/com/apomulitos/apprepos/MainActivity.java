@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void referenciar() {
 
         btnLuis = findViewById(R.id.btnLuis);
+
         btnDaniel = findViewById(R.id.btnDaniel);
         btnCris = findViewById(R.id.btnCristhian);
         btnDavid = findViewById(R.id.btnDavid);
@@ -34,6 +36,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnLuis:
+
+                break;
+            case R.id.btnDaniel:
+
+                break;
+            case R.id.btnCristhian:
+
+                break;
+            case R.id.btnDavid:
+
+                break;
+
+            default:
+                Toast.makeText(this, "Opcion no valida", Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 }
