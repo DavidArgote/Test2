@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DavidActivity extends AppCompatActivity {
 
@@ -48,12 +49,31 @@ public class DavidActivity extends AppCompatActivity {
 
     private void calcIndice() {
 
-        int peso = Integer.parseInt(editTextPeso.getText().toString());
-        int altura = Integer.parseInt(editTextAltura.getText().toString());
+        double peso = Double.parseDouble(editTextPeso.getText().toString());
+        double altura = Double.parseDouble(editTextAltura.getText().toString());
 
-        int result = peso / (altura*altura);
+        altura = (altura * 0.01) / 1;
+
+        double result = peso / Math.pow(altura, 2);
 
         textResul.setText(String.valueOf(result));
+
+        if (result >= 30 && result <= 34.9 && spGenero.getSelectedItem().equals("Femenino")){
+            // Obesa 1
+        }else if (result >= 35 && result <= 39.9 && spGenero.getSelectedItem().equals("Femenino")){
+            // Obeso 2
+        }else if (result >= 40 && result <= 49.9 && spGenero.getSelectedItem().equals("Femenino")){
+            // Obeso 3
+        }else if (result > 50 && spGenero.getSelectedItem().equals("Femenino")){
+            // obeso total
+        }else if (result >= 25 && result <= 29.9 && spGenero.getSelectedItem().equals("Femenino")){
+            //Sobre peso
+        }else if (result >= 18.5 && result <= 24.9 && spGenero.getSelectedItem().equals("Femenino")){
+            // Normal
+        }else if (result < 18.5 && spGenero.getSelectedItem().equals("Femenino")){
+            // bajo peso
+        }
+
 
     }
 
