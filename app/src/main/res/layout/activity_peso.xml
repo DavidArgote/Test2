@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Encuentra tu Masa ideal"
+        android:text="ingresa_tu_peso"
         android:textSize="40sp"
         tools:ignore="MissingConstraints" />
     <EditText
@@ -17,20 +17,20 @@
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ingresa_tu_peso"
+        android:hint="ingresa_tu_peso"
         android:inputType="number" />
     <EditText
         android:id="@+id/EdiEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ingrese_su_edad"
+        android:hint="ingresa_tu_peso"
         android:inputType="number" />
     <EditText
         android:id="@+id/EdiAtura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="@string/ingresa_tu_atura"/>
+        android:hint="ingresa_tu_peso"/>
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
