@@ -61,7 +61,7 @@ public class pesoIdealCristhian extends AppCompatActivity implements View.OnClic
                 }else if (resultadoMci > 30){
                     resCons.setText("Usted tiene OBESIDAD");
                 }
- 
+
                 resMci.setText("Su indice de masa corporal es: "+resultadoMci);
                 double valorPI = (valorA-100);
                 resPI.setText("Su peso ideal debe de ser de: "+valorPI);

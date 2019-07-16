@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnDaniel = findViewById(R.id.btnDaniel);
         btnCris = findViewById(R.id.btnCristhian);
+        btnCris.setOnClickListener(this);
         btnDavid = findViewById(R.id.btnDavid);
 
     }
@@ -45,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btnCristhian:
+                Intent pasar = new Intent(MainActivity.this, pesoIdealCristhian.class);
+                startActivity(pasar);
 
                 break;
             case R.id.btnDavid:
