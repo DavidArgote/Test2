@@ -1,14 +1,3 @@
 <resources>
     <string name="app_name">AppRepos</string>
-    <string name="calcularmasa">Calcular IMC</string>
-    <string name="peso">Peso</string>
-    <string name="altura">Altura</string>
-    <string name="calcular">Calcular</string>
-
-    <array name="generos">
-        <item>Selecciona tu genero</item>
-        <item>Maculino</item>
-        <item>Femenino</item>
-    </array>
-
 </resources>
