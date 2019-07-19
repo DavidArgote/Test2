@@ -11,6 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".pesoIdealCristhian"></activity>
         <activity android:name=".DavidActivity"></activity>
+        <activity android:name=".Imc">
+
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
