@@ -2,6 +2,7 @@ package com.apomulitos.apprepos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLuis = findViewById(R.id.btnLuis);
 
         btnDaniel = findViewById(R.id.btnDaniel);
+        btnDaniel.setOnClickListener(this);
         btnCris = findViewById(R.id.btnCristhian);
         btnDavid = findViewById(R.id.btnDavid);
 
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btnDaniel:
-
+                Intent ir = new Intent(getApplicationContext(),Imc.class);
+                startActivity(ir);
                 break;
             case R.id.btnCristhian:
 
