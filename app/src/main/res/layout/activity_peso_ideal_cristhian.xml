@@ -96,7 +96,7 @@
         android:ems="10"
         android:hint="Digite su edad"
         android:inputType="textPersonName"
-        android:textColor="@android:color/background_light"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,7 +109,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
-        android:text="Su indice de masa muscular es: "
+        android:text="Su indice de masa corporal es: "
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
@@ -125,7 +125,7 @@
         android:layout_height="87dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
         android:text="Su peso ideal debe de ser de: "
@@ -152,7 +152,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvResultadoMciCristhian" />
 
