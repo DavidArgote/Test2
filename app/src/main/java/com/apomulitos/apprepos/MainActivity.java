@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
- 
+
         referenciar();
 
 
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void referenciar() {
 
         btnLuis = findViewById(R.id.btnLuis);
+        btnLuis.setOnClickListener(this);
 
         btnDaniel = findViewById(R.id.btnDaniel);
         btnDaniel.setOnClickListener(this);
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnLuis:
+                Intent intent = new Intent(getApplicationContext(),Peso.class);
+                startActivity(intent);
 
                 break;
             case R.id.btnDaniel:
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.btnDavid:
+
+                Intent intent = new Intent(MainActivity.this, DavidActivity.class);
+                startActivity(intent);
 
                 break;
 

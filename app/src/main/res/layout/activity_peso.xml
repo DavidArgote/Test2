@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Peso">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ingresa_tu_peso"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/EdiPeso"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ingresa_tu_peso"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/EdiEdad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ingresa_tu_peso"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/EdiAtura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="ingresa_tu_peso"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/RadioMascu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masculino"/>
+        <RadioButton
+            android:id="@+id/RadioFeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino"/>
+    </RadioGroup>
+    <Button
+        android:text="Enviar"
+        android:id="@+id/ButtonEnvio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/TexviewRES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/tabla"
+        />
+
+</LinearLayout>
