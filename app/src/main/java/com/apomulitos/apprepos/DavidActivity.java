@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class DavidActivity extends AppCompatActivity {
 
     private EditText editTextPeso;
@@ -17,7 +19,7 @@ public class DavidActivity extends AppCompatActivity {
     private Spinner spGenero;
 
     private Button btnCalc;
-    private TextView textResul;
+    private TextView textResul, tvMensaje;
 
 
     @Override
@@ -38,6 +40,8 @@ public class DavidActivity extends AppCompatActivity {
 
         textResul = findViewById(R.id.textResult);
 
+        tvMensaje = findViewById(R.id.tvMensajeAD);
+
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +53,7 @@ public class DavidActivity extends AppCompatActivity {
 
     private void calcIndice() {
 
+
         double peso = Double.parseDouble(editTextPeso.getText().toString());
         double altura = Double.parseDouble(editTextAltura.getText().toString());
 
@@ -56,22 +61,31 @@ public class DavidActivity extends AppCompatActivity {
 
         double result = peso / Math.pow(altura, 2);
 
-        textResul.setText(String.valueOf(result));
+
+
+        textResul.setText(String.format("%.2f", result));
 
         if (result >= 30 && result <= 34.9 && spGenero.getSelectedItem().equals("Femenino")){
             // Obesa 1
+            tvMensaje.setText("Estas muy gordita");
         }else if (result >= 35 && result <= 39.9 && spGenero.getSelectedItem().equals("Femenino")){
             // Obeso 2
+            tvMensaje.setText("Estas un poco gordita");
         }else if (result >= 40 && result <= 49.9 && spGenero.getSelectedItem().equals("Femenino")){
             // Obeso 3
+            tvMensaje.setText("Estas gordita");
         }else if (result > 50 && spGenero.getSelectedItem().equals("Femenino")){
             // obeso total
+            tvMensaje.setText("Estas obesa");
         }else if (result >= 25 && result <= 29.9 && spGenero.getSelectedItem().equals("Femenino")){
             //Sobre peso
+            tvMensaje.setText("Tienes sobre peso");
         }else if (result >= 18.5 && result <= 24.9 && spGenero.getSelectedItem().equals("Femenino")){
             // Normal
+            tvMensaje.setText("Estas normal");
         }else if (result < 18.5 && spGenero.getSelectedItem().equals("Femenino")){
             // bajo peso
+            tvMensaje.setText("Tienes peso bajo");
         }
 
 

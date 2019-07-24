@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnDaniel;
     private Button btnCris;
     private Button btnDavid;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnDaniel = findViewById(R.id.btnDaniel);
         btnDaniel.setOnClickListener(this);
+
         btnCris = findViewById(R.id.btnCristhian);
         btnCris.setOnClickListener(this);
+
         btnDavid = findViewById(R.id.btnDavid);
+        btnDavid.setOnClickListener(this);
 
     }
 
@@ -42,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnLuis:
-                Intent intent = new Intent(getApplicationContext(),Peso.class);
+                intent = new Intent(getApplicationContext(),Peso.class);
                 startActivity(intent);
 
                 break;
@@ -51,13 +55,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(ir);
                 break;
             case R.id.btnCristhian:
-                Intent pasar = new Intent(MainActivity.this, pesoIdealCristhian.class);
-                startActivity(pasar);
+                intent = new Intent(MainActivity.this, pesoIdealCristhian.class);
+                startActivity(intent);
 
                 break;
             case R.id.btnDavid:
 
-                Intent intent = new Intent(MainActivity.this, DavidActivity.class);
+                intent = new Intent(MainActivity.this, DavidActivity.class);
                 startActivity(intent);
 
                 break;
